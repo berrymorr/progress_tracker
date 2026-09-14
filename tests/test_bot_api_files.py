@@ -11,7 +11,10 @@ from progress_tracker.bot_api.files import (
     validate_local_file_path,
 )
 
-TOKEN = "8697336546:AAEFbdz_BjQ6d2JnsUTAipsNJQbIgKS_wYg"
+# A dummy value. These tests only use the token as a path component — they
+# never reach Telegram with it, so a real one buys nothing and leaks if
+# committed. Mirrors the `other_token` placeholder further down.
+TOKEN = "1234567890:TESTTOKEN"
 LOCAL_ROOT = "/var/lib/telegram-bot-api"
 
 
