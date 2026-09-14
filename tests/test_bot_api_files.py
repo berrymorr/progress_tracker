@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import os
 from pathlib import Path
 
 import pytest
@@ -11,7 +12,11 @@ from progress_tracker.bot_api.files import (
     validate_local_file_path,
 )
 
-TOKEN = "8697336546:AAEFbdz_BjQ6d2JnsUTAipsNJQbIgKS_wYg"
+# NEVER hardcode a real bot token here. These tests use TOKEN only as an opaque
+# path segment for path-normalization checks, so a dummy default keeps them
+# runnable without any configuration. If you want to exercise them against a
+# specific token, set BOT_TOKEN in the environment (same var the app reads).
+TOKEN = os.environ.get("BOT_TOKEN", "123456:TESTTOKEN")
 LOCAL_ROOT = "/var/lib/telegram-bot-api"
 
 
