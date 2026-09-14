@@ -16,7 +16,7 @@ from progress_tracker.bot_api.files import (
 # path segment for path-normalization checks, so a dummy default keeps them
 # runnable without any configuration. If you want to exercise them against a
 # specific token, set BOT_TOKEN in the environment (same var the app reads).
-TOKEN = os.environ.get("BOT_TOKEN", "123456:TESTTOKEN")
+TOKEN = os.environ.get("BOT_TOKEN", "1234567890:TESTTOKEN")
 LOCAL_ROOT = "/var/lib/telegram-bot-api"
 
 
